@@ -11,9 +11,9 @@ gcc -o flatex flatex.c
 
 # Compilation
 
-To pick a specific version (`cv`, `cv-long`, `cv-longer`):
+To pick one or more specific versions (`cv`, `cv-long`, `cv-longer`):
 ```
-./makecv cv-long
+./makecv cv,cv-long
 ```
 
 To compile all:

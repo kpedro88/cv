@@ -1,35 +1,36 @@
 #!/bin/bash -e
 
 runpdflatex() {
-  SOURCE=$1
-  pdflatex -interaction=nonstopmode -synctex=-1 "$SOURCE.tex" > "$SOURCE.log" 2>&1
+	SOURCE=$1
+	pdflatex -interaction=nonstopmode -synctex=-1 "$SOURCE.tex" > "$SOURCE.log" 2>&1
 }
 runflatex() {
-  SOURCE=$1
-  ./flatex.exe "$SOURCE.tex" > "${SOURCE}_flatex.log" 2>&1
+	SOURCE=$1
+	./flatex.exe "$SOURCE.tex" > "${SOURCE}_flatex.log" 2>&1
 }
 runall() {
-  SOURCE=$1
-  if [ -z "$SOURCE" ]; then
-    echo "No source specified"
-    exit 1
-  fi
-  runpdflatex $SOURCE
-  runflatex $SOURCE
-  echo "made $SOURCE"
+	SOURCE=$1
+	if [ -z "$SOURCE" ]; then
+		echo "No source specified"
+		exit 1
+	fi
+	runpdflatex $SOURCE
+	runflatex $SOURCE
+	echo "made $SOURCE"
 }
 
-ARG=all
-if [ -n "$1" ]; then
-  ARG=$1
+ARGS_ALL=(
+cv \
+cv-long \
+cv-longer \
+)
+ARGS=()
+if [ -z "$1" ] || [ "$1" = all ]; then
+	ARGS=(${ARGS_ALL[@]})
+else
+	IFS="," read -a ARGS <<< "$1"
 fi
 
-if [ "$ARG" == "cv" ] || [ "$ARG" == "all" ]; then
-  runall "cv"
-fi
-if [ "$ARG" == "cv-long" ] || [ "$ARG" == "all" ]; then
-  runall "cv-long"
-fi
-if [ "$ARG" == "cv-longer" ] || [ "$ARG" == "all" ]; then
-  runall "cv-longer"
-fi
+for ARG in ${ARGS[@]}; do
+	runall "$ARG"
+done
