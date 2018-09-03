@@ -9,7 +9,7 @@ My curriculum vitae
 gcc -o flatex flatex.c
 ```
 
-# Compilation
+## Compilation
 
 To pick one or more specific versions (`cv`, `cv-long`, `cv-longer`):
 ```
@@ -28,7 +28,7 @@ To upload to the web:
 ./upload
 ```
 
-# Sources
+## Sources
 
 * LaTeX resume class `res.cls` from [RPI](https://www.rpi.edu/dept/arc/training/latex/resumes/)
 * flatex from [CTAN](https://ctan.org/pkg/flatex?lang=en)
