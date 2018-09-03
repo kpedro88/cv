@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scp cv.pdf cv_merged.tex cv-long.pdf cv-long_merged.tex cv-longer.pdf cv-longer_merged.tex pedrok@pedrok.phpwebhosting.com:~/www/kjp/cv/

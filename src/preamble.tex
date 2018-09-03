@@ -1,0 +1,26 @@
+% LaTeX resume using res.cls
+%\documentclass[margin,line]{res}
+\documentclass[overlapped,line]{res}
+\usepackage{fullpage,needspace}
+\usepackage{amsmath,amssymb,enumitem}
+\usepackage[bookmarks=false,colorlinks=false,urlcolor=blue]{hyperref}
+%\usepackage[bookmarks=false]{hyperref}
+%\hypersetup{
+%	colorlinks=true,
+%	linkcolor=black,
+%	urlcolor=black
+%}
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+\setlength{\textheight}{10.5in} 
+\setlength{\resumewidth}{7.5in}
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\diamond$}
+\renewcommand{\labelitemiii}{$\cdot$}
+\renewcommand{\labelitemiv}{$\ast$}
+\setlist{nolistsep}
+%\hyphenation{communication}
+\oddsidemargin -.5in
+% Need to call this stupid command to initialize all the other dimension specifications.
+\newsectionwidth{0in}
