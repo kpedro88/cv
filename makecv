@@ -22,6 +22,7 @@ runall() {
 ARGS_ALL=(
 cv \
 cv-long \
+cv-longer \
 cv-longest \
 )
 ARGS=()
