@@ -1,5 +1,4 @@
 \setlength{\parskip}{0pt}
-\def\hslash{{\hbox{$H$\kern-0.8em\lower-.05ex\hbox{/}\kern0.10em}}}
 \section{Postdoctoral Research Experience}
 CMS Experiment - Postdoctoral Research Associate \hfill February 2015 - Present\\
 LHC Physics Center, Fermi National Accelerator Laboratory, Batavia, IL 60510 USA\\
@@ -11,20 +10,38 @@ Searching for pair production of gluinos decaying to final states including jets
 \item Studied and implemented procedures to assess corrections and systematic uncertainties in simulated signal samples.
 \item Investigated signal sensitivity for new models and in the compressed region of phase space, including kinematics, binning, and triggers.
 \item Helped implement jet reclustering for event reinterpretations to estimate the $\text{Z}\to\nu\nu$ background.
-%\item Improving dijet asymmetry non-Gaussian tail estimations for the rebalance and smear QCD background estimation.
+\item Author and language editor for related analysis searching for gauge-mediated supersymmetry breaking with photons, jets, and missing energy.
 \end{itemize}
-\underline{Phase 2 Upgrades}\\
-Co-led effort to interface Pandora particle flow algorithm with CMSSW for High Granularity Calorimeter reconstruction:
+\underline{Data Analysis: Semi-visible jets}\\
+Searching for resonant production of strongly-coupled dark matter from hidden sectors in the form of semi-visible jets.
 \begin{itemize}[leftmargin=12pt]
+\item Leading analysis group consisting of lab scientists, university professors, postdocs, and graduate students.
+\item Extensive effort in validating signal generation, including updating Pythia8 and understanding signal parameters ($\text{Z}^\prime$ mass, dark hadron mass, invisible fraction, and dark force coupling).
+\item Optimizing signal selection and developing BDT to tag semi-visible jets as supplement to baseline analysis.
+\item Studying jet trigger efficiency and background estimation techniques.
+\end{itemize}
+\underline{CMS Software}\\
+Managed Phase 2 software development efforts in CMSSW:
+\begin{itemize}[leftmargin=12pt]
+\item Accepted L3 Upgrade Simulation and Reconstruction Coordinator position in 2016, responsible for simulation and reconstruction software for subdetectors upgraded for Phase 2.
+\item Delivered functioning and efficient workflow to enable Monte Carlo production for Phase 2 TDRs with up to 200 interactions per bunch crossing.
+\item Promoted to L2 Upgrade Software Coordinator in 2017, responsible for maintaining Phase 2 geometries, simulation, digitization, reconstruction, trigger emulation, analysis tools, and workflows, reviewing all pull requests related to upgrades, release management, approving EPR pledges, and guiding development for subsequent TDR productions.
+\item Became Deputy Release Manager for CMSSW in 2018, responsible for release operations.
+\end{itemize}
+Started new projects to facilitate computing tasks for the demands of Phase 2 data volumes:
+\begin{itemize}[leftmargin=12pt]
+\item Integrating and testing the GeantV vectorized transport engine in the CMS software framework.
+\item Developing SONIC (Services for Optimized Network Inference on Coprocessors) for CMSSW with jet images.
+\item Testing new striped data analysis framework, which uses NoSQL and Python tools to process up to 20M events/sec.
+\end{itemize}
+\underline{HGCal}
+\begin{itemize}[leftmargin=12pt]
+\item Co-led effort to interface Pandora particle flow algorithm with CMSSW for High Granularity Calorimeter reconstruction:
 \item Reorganized and rewrote major portions of related CMSSW code, including modifications for scoping document studies; maintained external library for Pandora algorithms.
 \item Improved Pandora computing performance for high pileup events: speedup of 5-10x, reduced memory usage.
 \item Provided reconstruction used for performance and physics studies in the Phase 2 Technical Proposal and Scope Document.
-\end{itemize}
-Managed Phase 2 software development efforts in CMSSW:
-\begin{itemize}[leftmargin=12pt]
-\item Accepted L3 Upgrade Software Coordinator position in 2016, responsible for maintaining geometries, simulation, digitization, reconstruction, trigger emulation, analysis tools, and workflows with various combinations of subdetectors upgraded for Phase 2.
-\item Delivered functioning and efficient workflow to enable Monte Carlo production for Phase 2 TDRs with up to 200 interactions per bunch crossing.
-\item Promoted to L2 in 2017, responsible for reviewing all pull requests related to upgrades, release management, approving EPR pledges, and guiding development for subsequent TDR productions.
+\item Coordinated implementation of workflow for new geometry with mixed silicon/scintillator layers.
+\item Developing graph neural network approach for clustering and energy regression.
 \end{itemize}
 \underline{HCAL}\\
 Radiation damage studies:
@@ -39,5 +56,5 @@ Phase 1 software development:
 \item Implemented simulation and digitization code for QIE10 and QIE11 electronics, including significant code cleanup.
 \item Improved SiPM simulation to include or update features such as dark current, crosstalk, nonlinearity, pulse shape.
 \item Developed workflows for various HCAL upgrade configurations, various tools for testing and debugging, and consulted on reconstruction implementations.
-\item Became L3 HCAL CMSSW Co-Convener after role as leading developer for above features.
+\item Became L3 HCAL CMSSW Co-Convener (2016-2017) after role as leading developer for above features.
 \end{itemize}
