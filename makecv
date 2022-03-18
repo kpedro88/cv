@@ -21,7 +21,6 @@ runall() {
 
 ARGS_ALL=(
 cv \
-cv-long \
 )
 ARGS=()
 if [ -z "$1" ] || [ "$1" = all ]; then
