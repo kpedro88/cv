@@ -1,3 +1,5 @@
 #!/bin/bash
 
-scp cv.pdf cv_merged.tex pedrok@pedrok.phpwebhosting.com:~/www/kjp/cv/
+#scp cv.pdf cv_merged.tex pedrok@pedrok.phpwebhosting.com:~/www/kjp/cv/
+#scp -oProxyJump=vps cv.pdf cv_merged.tex pedrok@pedrok.phpwebhosting.com:~/www/kjp/cv/
+scp cv.pdf cv_merged.tex pedrok@kjplanet.com:~/www/kjplanet/kjp/cv/
