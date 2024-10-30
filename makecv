@@ -32,3 +32,5 @@ fi
 for ARG in ${ARGS[@]}; do
 	runall "$ARG"
 done
+
+./get_inspire.sh
