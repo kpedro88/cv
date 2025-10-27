@@ -28,5 +28,21 @@
 \makeatletter
 \AddToHook{cmd/description/after}{\bgroup}
 \AddToHook{env/description/end}{\egroup}
-\newcommand*\nbitem{\egroup\item\leavevmode\vtop\bgroup\hsize\linewidth\@parboxrestore}
+% restores description list's indentation and spacing
+\newcommand*\nbitem{%
+  \egroup
+  \item
+  \leavevmode
+  % start a vertical box to prevent hyperlink spanning page breaks
+  \vtop\bgroup
+  \hsize\linewidth
+  \@parboxrestore % restores list paragraph shape (from \@listi)
+  % restore indentation settings
+  \leftskip\@totalleftmargin
+  \rightskip\z@
+  \parfillskip\@flushglue
+  \parindent\listparindent
+  \advance\leftskip\labelwidth
+  \advance\leftskip\labelsep
+}
 \makeatother
