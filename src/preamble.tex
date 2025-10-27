@@ -2,7 +2,7 @@
 %\documentclass[margin,line]{res}
 \documentclass[overlapped,line]{res}
 \usepackage{fullpage,needspace}
-\usepackage{amsmath,amssymb,enumitem}
+\usepackage{amsmath,amssymb,enumitem,etoolbox}
 \usepackage[bookmarks=false,colorlinks=false,urlcolor=blue]{hyperref}
 %\usepackage[bookmarks=false]{hyperref}
 %\hypersetup{
@@ -24,3 +24,14 @@
 \oddsidemargin -.5in
 % Need to call this stupid command to initialize all the other dimension specifications.
 \newsectionwidth{0in}
+
+% define a version of the description environment that prevents items from breaking across pages
+\newenvironment{nbdescription}[1][]{%
+  % start a normal description environment with desired layout
+  \begin{description}[#1]%
+    % patch \item to ensure enough space before each one
+    \let\olditem\item
+    \renewcommand{\item}{\Needspace{2\baselineskip}\olditem}%
+}{%
+  \end{description}%
+}
