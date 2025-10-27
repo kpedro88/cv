@@ -24,3 +24,9 @@
 \oddsidemargin -.5in
 % Need to call this stupid command to initialize all the other dimension specifications.
 \newsectionwidth{0in}
+% prevent page breaks in items that may contain hyperlinks from https://tex.stackexchange.com/a/685098
+\makeatletter
+\AddToHook{cmd/description/after}{\bgroup}
+\AddToHook{env/description/end}{\egroup}
+\newcommand*\nbitem{\egroup\item\leavevmode\vtop\bgroup\hsize\linewidth\@parboxrestore}
+\makeatother
